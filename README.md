@@ -61,8 +61,8 @@ function winget {
             $packageNames = $Arguments[1..($Arguments.Count - 1)]
 
             foreach ($pkg in $packageNames) {
-                & $wingetExePath uninstall --name $pkg --source winget --accept-source-agreements
-                & $wingetExePath install --name $pkg --source winget --accept-source-agreements --accept-package-agreements
+                & $wingetExePath uninstall $pkg --source winget --accept-source-agreements
+                & $wingetExePath install $pkg --source winget --accept-source-agreements --accept-package-agreements
             }
         }
         else {
